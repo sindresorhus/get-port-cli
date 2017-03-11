@@ -1,7 +1,6 @@
-import childProcess from 'child_process';
 import test from 'ava';
-import pify from 'pify';
+import execa from 'execa';
 
 test(async t => {
-	t.true(Number(await pify(childProcess.execFile)('./cli.js')) > 0);
+	t.true(Number(await execa.stdout('./cli.js')) > 0);
 });
