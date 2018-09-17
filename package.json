@@ -13,13 +13,14 @@
     "get-port": "cli.js"
   },
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "scripts": {
     "test": "xo && ava"
   },
   "files": [
-    "cli.js"
+    "cli.js",
+    "meow-template.js"
   ],
   "keywords": [
     "cli-app",
@@ -40,8 +41,8 @@
     "random"
   ],
   "dependencies": {
-    "get-port": "^3.0.0",
-    "meow": "^3.4.2"
+    "get-port": "^4.0.0",
+    "meow": "^5.0.0"
   },
   "devDependencies": {
     "ava": "*",

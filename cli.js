@@ -2,11 +2,19 @@
 'use strict';
 const meow = require('meow');
 const getPort = require('get-port');
+const meowTemplate = require('./meow-template');
 
-meow(`
-	Example
-	  $ get-port
-	  51402
-`);
+const cli = meow(meowTemplate, {
+	input: [],
+	flags: {
+		host: {
+			type: 'string',
+			alias: 'h'
+		}
+	}
+});
 
-getPort().then(console.log);
+getPort({
+	host: cli.flags.host,
+	port: cli.input.map(port => Number(port))
+}).then(console.log);
