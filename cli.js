@@ -30,7 +30,11 @@ const cli = meow(`
 	}
 });
 
-getPort({
-	host: cli.flags.host,
-	port: cli.input.map(port => Number(port))
-}).then(console.log);
+(async () => {
+	const port = await getPort({
+		host: cli.flags.host,
+		port: cli.input.map(port => Number(port))
+	});
+
+	console.log(port);
+})();
