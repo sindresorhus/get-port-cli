@@ -40,12 +40,12 @@
 		"random"
 	],
 	"dependencies": {
-		"get-port": "^4.0.0",
+		"get-port": "^4.1.0",
 		"meow": "^5.0.0"
 	},
 	"devDependencies": {
-		"ava": "^0.25.0",
+		"ava": "^1.2.1",
 		"execa": "^1.0.0",
-		"xo": "^0.23.0"
+		"xo": "^0.24.0"
 	}
 }
