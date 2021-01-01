@@ -1,4 +1,4 @@
-# get-port-cli [![Build Status](https://travis-ci.org/sindresorhus/get-port-cli.svg?branch=master)](https://travis-ci.org/sindresorhus/get-port-cli)
+# get-port-cli
 
 > Get an available port
 
