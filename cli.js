@@ -1,7 +1,6 @@
 #!/usr/bin/env node
-'use strict';
-const meow = require('meow');
-const getPort = require('get-port');
+import meow from 'meow';
+import getPort from 'get-port';
 
 const cli = meow(`
 	Usage
@@ -22,18 +21,19 @@ const cli = meow(`
 	  $ get-port 3000 3002 --host=127.0.0.1
 	  3002
 `, {
+	importMeta: import.meta,
 	flags: {
 		host: {
 			type: 'string',
-			alias: 'h'
-		}
-	}
+			alias: 'h',
+		},
+	},
 });
 
 (async () => {
 	const port = await getPort({
 		host: cli.flags.host,
-		port: cli.input.map(port => Number(port))
+		port: cli.input.map(port => Number.parseInt(port, 10)),
 	});
 
 	console.log(port);

@@ -2,13 +2,11 @@
 
 > Get an available port
 
-
 ## Install
 
+```sh
+npm install --global get-port-cli
 ```
-$ npm install --global get-port-cli
-```
-
 
 ## Usage
 
@@ -34,12 +32,6 @@ $ get-port --help
     3002
 ```
 
-
 ## Related
 
 - [get-port](https://github.com/sindresorhus/get-port) - API for this module
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
